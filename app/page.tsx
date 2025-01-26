@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { NavbarDefault } from "./components/navbar/navbartw";
+import IntroContainer from "./components/introContainer/Container";
 
 import fs from 'fs';
 import yaml from 'js-yaml';
@@ -24,13 +25,19 @@ export default function Home() {
    <> 
     <NavbarDefault title={data.navbar.title} items={data.navbar.items} />
 
-    <div className="flex justify-center items-center h-screen bg-background text-foreground bg-cyan-50">
-      <h1 className="text-4xl font-bold">Hello, World!</h1>
-      <div>
-        <Image src="/logo.svg" alt="logo" width={200} height={10000} />
+
+    <IntroContainer
+       imageUrl="/static/background_main_images.jpg"
+       title={data.introContainer.title}
+       subtitle={data.introContainer.subtitle}
+       buttonContent={data.introContainer.button.content}
+       buttonHref={data.introContainer.button.href}
+       />
+      <div id="about">
+        
+        <h1 style={{paddingTop: "600px"}}>Home</h1>
+        <p>Welcome to the home page!</p> 
       </div>
-      <h1 className="text-4xl font-bold">Hello, World!</h1>
-    </div>
    </>
   );
 }

@@ -28,34 +28,27 @@ interface NavbarDefaultProps {
 
 export function NavbarDefault({title, items}: NavbarDefaultProps) {
   const [openNav, setOpenNav] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+  const [isOnTop, setIsOnTop] = React.useState(isMobile ? false : true);
+ 
 
-  const [isOnTop, setIsOnTop] = React.useState(true);
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-        setIsOnTop(false)
-
-    } else {
-        setIsOnTop(true);
-    }
-    });
 
     React.useEffect(() => {
         const handleScroll = () => {
           // Change the state based on scroll position
+          console.log(isMobile);
+          if(isMobile) return;
           if (window.scrollY > 50) {
-            setIsOnTop(true);
-          } else {
+            console.log("scrolling");
             setIsOnTop(false);
+          } else {
+            setIsOnTop(true);
           }
         };
         // Add scroll event listener
         window.addEventListener("scroll", handleScroll);
 
-        // Cleanup listener on unmount
-        return () => {
-        window.removeEventListener("scroll", handleScroll);
-        };
+       
     }, []);
 
   React.useEffect(() => {
@@ -64,6 +57,18 @@ export function NavbarDefault({title, items}: NavbarDefaultProps) {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
+
+
+  
+  
+    React.useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 768);
+        };
+    
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
  
   return (
     <nav 

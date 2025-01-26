@@ -2,7 +2,7 @@ navbar:
   title: "MONCHIMÓVEIS"
   items:
     - content: "NÓS"
-      href: "#"
+      href: "#about"
       target: false
       icon: null
     - content: "SERVIÇOS"
@@ -25,3 +25,10 @@ navbar:
       href: "#"
       target: false
       icon: "bi bi-star-fill"
+
+introContainer:
+  title: "MonchiMóveis"
+  subtitle: "Móveis Rústicos de Madeira Natural"
+  button:
+    content: "Saber Mais"
+    href: "#about"
