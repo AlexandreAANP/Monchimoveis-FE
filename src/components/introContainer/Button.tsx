@@ -47,6 +47,8 @@ export default function IntroButton({content, href}: {content:string, href:strin
             className="btn btn-primary mt-4"
             onClick={() => scrollToSection(href.replace("#", ""))}
             placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
             >
             {content}
         </Button>

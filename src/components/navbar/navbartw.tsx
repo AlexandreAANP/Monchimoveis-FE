@@ -109,6 +109,8 @@ export function NavbarDefault({title, items}: NavbarDefaultProps) {
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
           placeholder="" 
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
      >
           {openNav ? (
             <svg
