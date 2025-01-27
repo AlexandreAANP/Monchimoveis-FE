@@ -1,6 +1,5 @@
 'use client';
-import { Button } from "@material-tailwind/react"
-import { text } from "stream/consumers"
+
 
 import IntroButton from "./Button"
 import React from "react";
@@ -8,7 +7,7 @@ import React from "react";
 export default function IntroText({title, subtitle, buttonContent, buttonHref}: {title:string, subtitle:string, buttonContent:string, buttonHref:string}) {
 
 
-    const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+    const [isMobile, setIsMobile] = React.useState(false);
 
     React.useEffect(() => {
         const handleResize = () => {

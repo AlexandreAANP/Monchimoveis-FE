@@ -1,8 +1,6 @@
 
 "use client";
-import Image from "next/image";
 import Text from "./Text";
-import Button from "./Button";
 
 export default function IntroContainer({imageUrl, title, subtitle, buttonContent, buttonHref}: {imageUrl:string, title:string, subtitle:string, buttonContent:string, buttonHref:string}) {
 

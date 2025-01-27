@@ -35,12 +35,20 @@ export default function IntroButton({content, href}: {content:string, href:strin
 
     return (
         <Button
-        style={style}
-        variant="filled" 
-        className="btn btn-primary mt-4"
-        onClick={() => scrollToSection(href.replace("#", ""))}
-        >
-        {content}
+        
+        
+            color={undefined}
+            fullWidth={undefined}
+            ripple={undefined}
+            loading={false}
+            size={undefined}
+            style={style}
+            variant="filled"
+            className="btn btn-primary mt-4"
+            onClick={() => scrollToSection(href.replace("#", ""))}
+            placeholder={undefined}
+            >
+            {content}
         </Button>
     )
 }

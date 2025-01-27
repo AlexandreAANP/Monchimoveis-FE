@@ -1,14 +1,15 @@
-import Image from "next/image";
-import { NavbarDefault } from "./components/navbar/navbartw";
-import IntroContainer from "./components/introContainer/Container";
+'use client';
 
-import fs from 'fs';
+import IntroContainer from "../components/introContainer/Container";
+import content from "../content";
+// import fs from 'fs';
 import yaml from 'js-yaml';
-import path from 'path';
+// import path from 'path';
 
-function readYamlFile(filePath: string) {
+function readYamlFile() {
   try {
-    const fileContents = fs.readFileSync(path.resolve(filePath), 'utf8');
+    // const fileContents = fs.readFileSync(content(), 'utf8');
+    const fileContents = content();
     const data = yaml.load(fileContents);
     return data;
   } catch (e) {
@@ -17,17 +18,23 @@ function readYamlFile(filePath: string) {
   }
 }
 
+
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       data: readYamlFile(),
+//     },
+//   };
+// }
+
 export default function Home() {
 
-  const data: any = readYamlFile('./content.yml');
-  console.dir(data);
+  const data :any = readYamlFile();
+
   return (
    <> 
-    <NavbarDefault title={data.navbar.title} items={data.navbar.items} />
-
-
     <IntroContainer
-       imageUrl="/static/background_main_images.jpg"
+       imageUrl="background_main_images.jpg"
        title={data.introContainer.title}
        subtitle={data.introContainer.subtitle}
        buttonContent={data.introContainer.button.content}
