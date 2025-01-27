@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   basePath: '/Monchimoveis-FE',
   assetPrefix: '/Monchimoveis-FE/', // Set if your app will be served from a subdirectory
   trailingSlash: true,
-  reactStrictMode: true,
 };
 
 export default nextConfig;
