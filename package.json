@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && next export",
-    "build2": "next build && cp -r ./out ./docs",
+    "build2": "next build && cp -r ./out/. ./docs",
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out"
