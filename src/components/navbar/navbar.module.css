@@ -1,0 +1,15 @@
+.navitem {
+    color: #a7c44c;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navtitle {
+    font-size: 22px;
+    color: #eee;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
