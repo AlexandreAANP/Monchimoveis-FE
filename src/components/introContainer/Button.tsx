@@ -8,7 +8,7 @@ export default function IntroButton({content, href}: {content:string, href:strin
 
     const style = {
         color : "white",
-        backgroundColor: "#4287f4", //"#94ae44",
+        backgroundColor: "#94ae44",
         textShadow: "0 0 3px #859c3c",
         border: "0",
         padding: "14px 20px",
