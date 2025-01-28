@@ -1,0 +1,48 @@
+name: Build and Deploy Next.js to Docs
+
+on:
+  push:
+    branches:
+      - main # Adjust this to your default branch name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22' # Use the version compatible with your project
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step 4: Build the project
+    - name: Build the project
+      run: npm run build
+
+    # Step 5: Export the static site
+    - name: Export the static site
+      run: npm run export
+
+    # Step 6: Move the exported site to the docs folder
+    - name: Move to docs folder
+      run: |
+        rm -rf docs
+        mv out docs
+
+    # Step 7: Commit and push the changes
+    - name: Commit and push changes
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git add docs
+        git commit -m "Deploy Next.js site to docs" || echo "No changes to commit"
+        git push
