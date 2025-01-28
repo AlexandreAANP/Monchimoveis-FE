@@ -40,6 +40,8 @@ jobs:
 
     # Step 7: Commit and push the changes
     - name: Commit and push changes
+      env:
+          TOKEN: ${{ secrets.TOKEN_REPO }}
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
