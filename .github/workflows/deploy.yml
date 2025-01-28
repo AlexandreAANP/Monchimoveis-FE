@@ -30,15 +30,15 @@ jobs:
     - name: Build the project
       run: npm run build
 
-    # Step 5: Add .nojekyll file
-    - name: Add .nojekyll file
-      run: echo "" > docs/.nojekyll
-
-    # Step 6: Move the exported site to the docs folder
+    # Step 5: Move the exported site to the docs folder
     - name: Move to docs folder
       run: |
         rm -rf docs
         mv out docs
+
+    # Step 6: Add .nojekyll file
+    - name: Add .nojekyll file
+      run: echo "" > docs/.nojekyll
 
     # Step 7: Commit and push the changes
     - name: Commit and push changes
