@@ -26,7 +26,7 @@ export default function NavBarItem({content, href, target, icon}: NavBarItemProp
             )
         }
         return (
-            <li className={className} key="{content}">{icon == "bi bi-star-fill" }<a className={`cursor-pointer ${styles.navbar}`} target="_blank" onClick={() => scrollToSection(href.replace("#", ""))}>{content}</a></li>
+            <li className={className} key="{content}">{icon == "bi bi-star-fill" }<a className={`cursor-pointer ${styles.navitem}`} target="_blank" onClick={() => scrollToSection(href.replace("#", ""))}>{content}</a></li>
         )
     }
     
@@ -36,6 +36,6 @@ export default function NavBarItem({content, href, target, icon}: NavBarItemProp
         )
     }
     return (
-        <li className={className} key="{content}"><a className={`cursor-pointer ${styles.navbar}`}  onClick={() => scrollToSection(href.replace("#", ""))}>{content}</a></li>
+        <li className={className} key="{content}"><a className={`cursor-pointer ${styles.navitem}`}  onClick={() => scrollToSection(href.replace("#", ""))}>{content}</a></li>
     ) 
 }
