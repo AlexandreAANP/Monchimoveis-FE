@@ -20,7 +20,7 @@ export default function TextContainer({subtitle, text, enSubtitle, enText}: {sub
 
   
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center px-5" style={{marginTop: "4%"}}>
+    <div className="container mx-auto flex flex-col items-center justify-center px-5" style={{marginTop: "4%", paddingLeft: "5%", paddingRight: "5%"}}>
       
         <div className="mb-2 mt-5 flex w-full items-center justify-between">
             <div className="">
