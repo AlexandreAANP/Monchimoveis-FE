@@ -1,9 +1,11 @@
 'use client';
 
 import IntroContainer from "../components/introContainer/Container";
+import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
 import content from "../content";
 // import fs from 'fs';
 import yaml from 'js-yaml';
+import React from 'react';
 // import path from 'path';
 
 function readYamlFile() {
@@ -11,6 +13,7 @@ function readYamlFile() {
     // const fileContents = fs.readFileSync(content(), 'utf8');
     const fileContents = content();
     const data = yaml.load(fileContents);
+    console.log(data);
     return data;
   } catch (e) {
     console.log(e);
@@ -18,18 +21,20 @@ function readYamlFile() {
   }
 }
 
-
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       data: readYamlFile(),
-//     },
-//   };
-// }
-
 export default function Home() {
 
   const data :any = readYamlFile();
+
+  const [isMobile, setIsMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
 
   return (
    <> 
@@ -39,12 +44,20 @@ export default function Home() {
        subtitle={data.introContainer.subtitle}
        buttonContent={data.introContainer.button.content}
        buttonHref={data.introContainer.button.href}
+       isMobile={isMobile}
        />
-      <div id="about">
-        
-        <h1 style={{paddingTop: "600px"}}>Home</h1>
-        <p>Welcome to the home page!</p> 
-      </div>
+
+    <OurHistoryContainer
+        title={data.ourHistory.title}
+        urlVideo={data.ourHistory.urlVideo}
+        text={data.ourHistory.text}
+        subtitle={data.ourHistory.subtitle}
+        enSubtitle={data.ourHistory.enSubtitle}
+        enText={data.ourHistory.enText}
+        isMobile={isMobile}
+    />
+      
+
    </>
   );
 }

@@ -41,7 +41,13 @@ export default function RootLayout({
 
   const data :any = readYamlFile();
   return (
-    <html lang="en">
+    <html lang="pt">
+      <head>
+
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link> */}
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

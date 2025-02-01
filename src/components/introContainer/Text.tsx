@@ -4,19 +4,10 @@ import React from "react";
 import styles from "./introContainer.module.css"
 
 
-export default function IntroText({title, subtitle, buttonContent, buttonHref}: {title:string, subtitle:string, buttonContent:string, buttonHref:string}) {
+export default function IntroText({title, subtitle, buttonContent, buttonHref, isMobile}: {title:string, subtitle:string, buttonContent:string, buttonHref:string, isMobile:boolean}) {
 
 
-    const [isMobile, setIsMobile] = React.useState(false);
-
-    React.useEffect(() => {
-        const handleResize = () => {
-          setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-      }, []);
+    
 
 
     return (
@@ -30,7 +21,7 @@ export default function IntroText({title, subtitle, buttonContent, buttonHref}: 
                 {subtitle}
             </h1>
             <p className={styles.pStyle}></p>
-            <IntroButton content={buttonContent} href={buttonHref}  />
+            <IntroButton content={buttonContent} href={buttonHref} isMobile={isMobile}  />
         </div>
     )
 }

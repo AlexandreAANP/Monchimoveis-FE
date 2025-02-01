@@ -1,0 +1,51 @@
+.divAbout {
+    padding: 120px 0;
+    background-color: #f6f6f6;
+}
+
+.sectioTitle {
+    margin-bottom: 70px;
+}
+
+.h2Title {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 34px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.hrTitle {
+    height: 4px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background-color: #a7c44c;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 0;
+}
+
+.translateButton {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 5px;
+    background-color: #a7c44c;
+}
+
+.subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 500;
+}
+
+.subtext {
+    line-height: 24px;
+    margin: 15px 0 30px;
+    font-size: 17px;
+    color: #777;
+    font-weight: 300;
+}
+
