@@ -8,7 +8,7 @@ navbar:
       target: false
       icon: null
     - content: "SERVIÇOS"
-      href: "#"
+      href: "#services"
       target: false
       icon: null
     - content: "PROJETOS"
@@ -41,6 +41,22 @@ ourHistory:
   subtitle: "MÓVEIS ARTESANAIS"
   text: "Não há nada que se compare ao mobiliário natural. Todos os móveis são artesanais, fabricados em Monchique de madeira maciça das mais variadas espécies oriundas da serra de Monchique no Algarve. A linha entre móveis rústicos e a forma natural da madeira cruzam-se numa simbiose perfeita entre as peças naturais com bases modernas, que se enquadram perfeitamente num ambiente contemporâneo. Pode desfrutar de mobiliário natural de design único em sua casa, sabendo que todos os móveis de madeira são trabalhados apartir de madeiras sustentáveis num recurso renovável, em que por cada árvore colhida outras árvores serão plantadas. Cada peça de mobiliário natural tem o seu próprio caráter não havendo duas peças iguais."
   enSubtitle: "NATURAL WOOD FURNITURE"
-  enText: "There is nothing that compares to the natural wood furniture. All furnishings are handcrafted in Monchique manufactured of solid wood in a variety of species from the mountains of Monchique in the Algarve. The line between rustic furniture and the natural shape of the wood intersects in a perfect symbiosis between the natural bases which fit perfectly in a contemporary setting. You can enjoy natural furniture unique design in your home, knowing that all wooden furniture are crafted from sustainable wood a renewable resource, where for every tree harvest other trees will be planted. Each piece of furniture has naturally its own character so you wont find two pieces alike."`;
+  enText: "There is nothing that compares to the natural wood furniture. All furnishings are handcrafted in Monchique manufactured of solid wood in a variety of species from the mountains of Monchique in the Algarve. The line between rustic furniture and the natural shape of the wood intersects in a perfect symbiosis between the natural bases which fit perfectly in a contemporary setting. You can enjoy natural furniture unique design in your home, knowing that all wooden furniture are crafted from sustainable wood a renewable resource, where for every tree harvest other trees will be planted. Each piece of furniture has naturally its own character so you wont find two pieces alike."
+  
+services:
+  title: "Móveis Personalizados"
+  text: "Criamos móveis únicos e personalizados, em madeira rústica, para atender ás suas necessidades e estilo."
+  items:
+    - title: "Móveis Personalizados"
+      text: "Criamos móveis únicos e personalizados, em madeira rústica, para atender ás suas necessidades e estilo."
+      image: "background_main_images.jpg"
+    - title: "Design Exclusivo"
+      text: "Desenvolvemos móveis rústicos com design exclusivo, feitos sob medida para complementar o seu ambiente. Cada criação é pensada para unir a beleza natural da madeira com a funcionalidade, resultando em peças que se destacam pelo seu caráter único e pelo cuidado artesanal."
+      image: "section_image2.jpg"
+    - title: "Móveis Artesanais"
+      text: "Oferecemos a criação de móveis artesanais sob encomenda, feitos com madeira rústica de alta qualidade. Nossos artesãos dedicam-se a cada detalhe, garantindo que cada peça seja uma obra de arte funcional, adaptada às suas especificações e que traga aconchego e estilo ao seu lar."
+      image: "section_image3.jpg"
+  
+  `;
 
 }

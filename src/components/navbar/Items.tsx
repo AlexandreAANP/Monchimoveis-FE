@@ -9,7 +9,6 @@ export default function Items({ items }: { items: ItemProps[] }) {
 
         return items.map((item, e) => {
             const key = "navbar-item-"+e;
-            console.log(item);
             return <Item content={item.content} href={item.href} target={item.target} icon={item.icon} key={key}/>
             });
     }

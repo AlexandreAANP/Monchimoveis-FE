@@ -21,7 +21,7 @@ export default function OurHistoryContainer({title, urlVideo, subtitle, text, en
         <div id="about" className={styles.divAbout} style={isMobile ? {paddingTop: "50px"} : {paddingTop: "120px"}}>
             <div className={styles.container}>
                 <div className={`${styles.sectioTitle} text-center center`} style={isMobile ? {marginBottom: "20px"} : {marginBottom: "40px"}}>
-                    <h1 className={styles.h2Title}>{title}</h1>
+                    <h1 className={styles.h2Title} style={isMobile ? {fontSize: "28px"}: {fontSize: "34px"}} >{title}</h1>
                     <hr className={styles.hrTitle}></hr>
                 </div>
                 
