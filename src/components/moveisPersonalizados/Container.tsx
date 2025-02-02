@@ -12,7 +12,7 @@ const ServiceItemComponent = ({title, text, image}: ServiceItem ) => {
     return (
         <div className="basis-full pl-3 pr-3">
             <div className="flex flex-col items-center justify-center pr-5 pl-5">
-                <img src={image} alt={title} width={300} height={300}/>
+                <img src={image} alt={title} width={300} height={300} className="shadow-md"/>
                 <h3 className={styles.h3}>{title}</h3>
                 <p className={styles.p}>{text}</p>
             </div>

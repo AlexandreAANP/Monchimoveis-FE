@@ -25,11 +25,9 @@ export default function OurHistoryContainer({title, urlVideo, subtitle, text, en
                     <hr className={styles.hrTitle}></hr>
                 </div>
                 
-                    <div className="grid place-items-center">
+                    <div className="flex flex-col items-center">
                         <iframe
-                            className='w-3/4 h-64 md:w-2/2 md:h-96'
-                            width="100%"
-                            height="315"
+                            className='w-3/4 h-64 md:w-1/2 md:h-96 shadow-gray-400 shadow-xl'
                             src={urlVideo}
                             title="Monchimoveis"
                             frameBorder="0"
