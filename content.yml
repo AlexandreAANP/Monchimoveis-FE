@@ -6,7 +6,7 @@ navbar:
       target: false
       icon: null
     - content: "SERVIÇOS"
-      href: "#"
+      href: "#services"
       target: false
       icon: null
     - content: "PROJETOS"
@@ -52,3 +52,5 @@ services:
       text: "Desenvolvemos móveis rústicos com design exclusivo, feitos sob medida para complementar o seu ambiente. Cada criação é pensada para unir a beleza natural da madeira com a funcionalidade, resultando em peças que se destacam pelo seu caráter único e pelo cuidado artesanal."
       image: "section_image2.jpg"
     - title: "Móveis Artesanais"
+      text: "Oferecemos a criação de móveis artesanais sob encomenda, feitos com madeira rústica de alta qualidade. Nossos artesãos dedicam-se a cada detalhe, garantindo que cada peça seja uma obra de arte funcional, adaptada às suas especificações e que traga aconchego e estilo ao seu lar."
+      image: "section_image3.jpg"

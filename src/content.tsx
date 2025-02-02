@@ -8,7 +8,7 @@ navbar:
       target: false
       icon: null
     - content: "SERVIÇOS"
-      href: "#"
+      href: "#services"
       target: false
       icon: null
     - content: "PROJETOS"
