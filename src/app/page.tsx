@@ -2,6 +2,7 @@
 
 import IntroContainer from "../components/introContainer/Container";
 import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
+import MoveisPersonalizadosContainer from "../components/moveisPersonalizados/Container";
 import content from "../content";
 // import fs from 'fs';
 import yaml from 'js-yaml';
@@ -55,6 +56,13 @@ export default function Home() {
         enSubtitle={data.ourHistory.enSubtitle}
         enText={data.ourHistory.enText}
         isMobile={isMobile}
+    />
+
+    <MoveisPersonalizadosContainer
+      title={data.services.title}
+      text={data.services.text}
+      items={data.services.items}
+      isMobile={isMobile}
     />
       
 

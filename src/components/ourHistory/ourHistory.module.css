@@ -13,6 +13,7 @@
     font-size: 34px;
     color: #333;
     text-transform: uppercase;
+    text-rendering: optimizeLegibility !important;
 }
 
 .hrTitle {
@@ -39,6 +40,7 @@
     text-transform: uppercase;
     color: #333;
     font-weight: 500;
+    text-rendering: optimizeLegibility !important;
 }
 
 .subtext {
@@ -47,5 +49,6 @@
     font-size: 17px;
     color: #777;
     font-weight: 300;
+    text-rendering: optimizeLegibility !important;
 }
 
