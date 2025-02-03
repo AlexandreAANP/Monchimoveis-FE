@@ -1,0 +1,60 @@
+.projects {
+    padding-top: 120px;
+    background-color: #f6f6f6;
+}
+.h2 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 34px;
+    color: #333;
+    text-transform: uppercase;
+}
+.hr {
+    height: 4px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background-color: #a7c44c;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 0;
+}
+
+.button {
+    color: #a7c44c;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 2px solid #a7c44c;
+    border-radius: 10px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+}
+
+.buttonActive{
+    background: #a7c44c;
+    color: #fff;
+}
+
+.portofolioItem {
+    margin: 15px 0;
+}
+
+.bgHoverText {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    color: #333;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 30% 0 0 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 0 50px 0 50px;
+}
+
+.image {
+    border-radius: 0 50px 0 50px;
+}

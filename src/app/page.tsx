@@ -3,6 +3,7 @@
 import IntroContainer from "../components/introContainer/Container";
 import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
 import MoveisPersonalizadosContainer from "../components/moveisPersonalizados/Container";
+import ProjectsContainer from "../components/projects/projectsContainer";
 import content from "../content";
 // import fs from 'fs';
 import yaml from 'js-yaml';
@@ -63,6 +64,10 @@ export default function Home() {
       text={data.services.text}
       items={data.services.items}
       isMobile={isMobile}
+    />
+
+    <ProjectsContainer
+    
     />
       
 
