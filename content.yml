@@ -54,3 +54,36 @@ services:
     - title: "Móveis Artesanais"
       text: "Oferecemos a criação de móveis artesanais sob encomenda, feitos com madeira rústica de alta qualidade. Nossos artesãos dedicam-se a cada detalhe, garantindo que cada peça seja uma obra de arte funcional, adaptada às suas especificações e que traga aconchego e estilo ao seu lar."
       image: "section_image3.jpg"
+
+projects:
+  categories:
+    - name: "Mobiliário de quarto"
+      items:
+        - title: "Cama de Casal"
+          image: "projects_cama.jpg"
+          url: "#"
+        - title: "Beliche"
+          image: "projects_cama2.jpg"
+          url: "#"
+        - title: "Cómoda"
+          image: "projects_cama3.jpg"
+    - name: "Mesas"
+      items:
+        - title: "Mesa"
+          image: "projects_mesas.jpg"
+          url: "#"
+        - title: "Mesa de Sala"
+          image: "projects_mesas2.jpg"
+          url: "#"
+        - title: "Mesa de centro"
+          image: "projects_mesas3.jpg"
+    - name: "Espelhos"
+      items:
+        - title: "Espelho"
+          image: "projects_espelho.jpg"
+          url: "#"
+        - title: "Espelho"
+          image: "projects_espelho2.jpg"
+          url: "#"
+        - title: "Espelho"
+          image: "projects_espelho3.jpg"
