@@ -4,6 +4,8 @@ import ProjectButton from './Button';
 import PortofolioItem from './PortofolioItem';
 import { PortofolioItemProps } from './PortofolioItem';
 
+import { motion, AnimatePresence } from "framer-motion";
+
 
 import React from 'react';
 
@@ -14,27 +16,34 @@ export interface categoryProps {
 
 
 export default function ProjectsContainer({categories}: {categories:categoryProps[]}) {
-    const [active, setActive] = React.useState(0);
+    const [active, setActive] = React.useState("ALL");
     // const categories = ["Todos os Produtos", "Mobiliário de quarto", "Mesas"];
-    const setActiveButton = (index: number) => {
+    const setActiveButton = (index: string) => {
         setActive(index);
 
     }
 
     var buttons = categories.map((category, index) => {
-        return (<ProjectButton active={active} index={index} setActiveButton={setActiveButton}>
+        return (<ProjectButton key={`btn-${index}`} active={active} index={category.category} setActiveButton={setActiveButton}>
         {category.category}
         </ProjectButton>);
-    });
-
+    })
+    
+    buttons.unshift(<ProjectButton active={active} index="ALL" setActiveButton={setActiveButton}> Todos os Produtos </ProjectButton>);
     //TODO 
-    const Items = categories.map((category, index) => {
-        return (
-            <PortofolioItem title={category.items[index].title} urlImage={category.items[index].urlImage} url={category.items[index].url}/>
-        )
-    });
+    var Items = categories.map((category, index) => (
+      
+         category.items.map((item, index) => {
+            return (
+                <PortofolioItem key={`${category.category}-${index}`} category={category.category} title={item.title} urlImage={item.urlImage} url={item.url} active={active}/>
+            )
+        })
 
+    ));
 
+    console.log(Items.flat().sort(() => Math.random() - 0.5));
+    var items = Items.flat();
+    items.sort(() => Math.random() - 0.5);
     return (
         <div id="projects" className={styles.projects}>
 
@@ -49,14 +58,13 @@ export default function ProjectsContainer({categories}: {categories:categoryProp
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center gap-5">
-                        <PortofolioItem title="Mobiliário de quarto" urlImage="projects_cama.jpg" url="https://monchimoveis.pt/product?reference=Cama/bed-10"/>
-                        <PortofolioItem title="Mobiliário de quarto" urlImage="projects_cama.jpg" url="https://monchimoveis.pt/product?reference=Cama/bed-10"/>
-                        <PortofolioItem title="Mobiliário de quarto" urlImage="projects_cama.jpg" url="https://monchimoveis.pt/product?reference=Cama/bed-10"/>
-                        <PortofolioItem title="Mobiliário de quarto" urlImage="projects_cama.jpg" url="https://monchimoveis.pt/product?reference=Cama/bed-10"/>
-                        <PortofolioItem title="Mobiliário de quarto" urlImage="projects_cama.jpg" url="https://monchimoveis.pt/product?reference=Cama/bed-10"/>
+                        {items}
                     </div>
                 </div>
-                
+                <div className='bg-gray-200 w-full h-96 flex items-center justify-center'>
+                    <h1>Teste</h1>
+                    <br></br>
+                </div>
             </div>
         </div>
     )

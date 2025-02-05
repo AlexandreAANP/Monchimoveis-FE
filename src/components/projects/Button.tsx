@@ -4,9 +4,9 @@ import styles from "./projects.module.css"
 
 interface ProjectButtonProps {
     children: string;
-    index: number;
-    active: number;
-    setActiveButton: (index: number) => void;
+    index: string;
+    active: string;
+    setActiveButton: (index: string) => void;
 }
 
 export default function ProjectButton({ children, index, active, setActiveButton }: ProjectButtonProps) {
