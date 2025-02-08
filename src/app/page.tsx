@@ -80,14 +80,13 @@ export default function Home() {
       isMobile={isMobile}
     />
       
-    <Contact/>
 
     <ProjectsContainer
       categories={categories(data.projects)}
 
     />
     
-    <Contact/>
+    <Contact title={data.contact.title} text={data.contact.text} address={data.contact.address} phone={data.contact.phone} email={data.contact.email}/>
 
    </>
   );

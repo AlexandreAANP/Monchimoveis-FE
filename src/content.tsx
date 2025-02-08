@@ -91,6 +91,12 @@ projects:
           url: "#"
         - title: "Espelho"
           image: "projects_espelho3.jpg"
+contact:
+  title: "Contacte-nos"
+  text: "Estamos situados num local estratégico para melhor o servir. Descubra como nos encontrar e aproveite a conveniência de ter os nossos serviços por perto."
+  address: "CARREIRINHA DAS MOÇAS CX-POSTAL 510X, 8550-427 Monchique"
+  phone: "+351 910 679 001"
+  email: "josegilvarela@hotmail.com"
   `;
 
 }
