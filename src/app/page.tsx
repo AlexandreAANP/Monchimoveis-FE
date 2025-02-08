@@ -4,10 +4,12 @@ import IntroContainer from "../components/introContainer/Container";
 import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
 import MoveisPersonalizadosContainer from "../components/moveisPersonalizados/Container";
 import Contact from "../components/contact/ContactContainer";
+import ProjectsContainer, { categoryProps } from "../components/projects/projectsContainer";
 import content from "../content";
 // import fs from 'fs';
 import yaml from 'js-yaml';
 import React from 'react';
+import { url } from "inspector";
 // import path from 'path';
 
 function readYamlFile() {
@@ -38,6 +40,18 @@ export default function Home() {
         return () => window.removeEventListener("resize", handleResize);
       }, []);
 
+    const categories = (projects: any): categoryProps[] => {
+      return projects.categories.map((category: any) => ({
+          category: category.name,
+          items: category.items.map((item: any) => ({
+              title: item.title,
+              urlImage: item.image,
+              url: item.url || "#", // Default to "#" if URL is missing
+          })),
+      }));
+  };
+
+
   return (
    <> 
     <IntroContainer
@@ -66,6 +80,13 @@ export default function Home() {
       isMobile={isMobile}
     />
       
+    <Contact/>
+
+    <ProjectsContainer
+      categories={categories(data.projects)}
+
+    />
+    
     <Contact/>
 
    </>
