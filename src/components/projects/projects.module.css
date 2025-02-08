@@ -1,0 +1,112 @@
+.projects {
+    padding-top: 120px;
+    background-color: #f6f6f6;
+}
+.h2 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 34px;
+    color: #333;
+    text-transform: uppercase;
+}
+.hr {
+    height: 4px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background-color: #a7c44c;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 0;
+}
+
+.button {
+    color: #a7c44c;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 2px solid #a7c44c;
+    border-radius: 10px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+}
+
+.buttonActive{
+    background: #a7c44c;
+    color: #fff;
+}
+
+.portofolioItem {
+    margin: 15px 0;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1;
+}
+
+.bgHoverText {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    color: #333;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 30% 0 0 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 0 50px 0 50px;
+}
+
+.image {
+    border-radius: 0 50px 0 50px;
+}
+
+.h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #333;
+}
+
+.h4Mobile{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #333;
+    display: none;
+}
+
+.overlay {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 12px;
+    }
+    .portofolioItem {
+        max-width: 150px;
+    }
+
+    .h4 {
+        font-size: 15px;
+    }
+    .h4Mobile{
+        display: block;
+    }
+
+    .image {
+        max-width: 150px;
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .divItems {
+        justify-content: center;
+    }
+    
+}
+ 
