@@ -1,0 +1,83 @@
+.contactDiv{
+    padding: 120px 0 60px 0;
+    background: #F6F6F6;
+}
+.contactSection {
+    margin-bottom: 70px;
+}
+.h2 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 34px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.hr {
+    height: 4px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background: #a7c44c;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 0;
+}
+.p {
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: #777;
+    font-weight: 300;
+    text-align: center;
+}
+
+.h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.contactItem {
+    margin: 20px 0 40px 0;
+}
+
+.contactItem span {
+    font-weight: 400;
+    color: #aaa;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+.contactItem p {
+    font-size: 16px;
+    margin: 0 0 10px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .h2 {
+        font-size: 34px;
+    }
+    .p {
+        font-size: 15px;
+        text-align: center;
+    }
+    .h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .contactItem span {
+        text-align: center;
+    }
+    .contactItem {
+        margin: 10px 0 20px 0;
+        
+    }
+}

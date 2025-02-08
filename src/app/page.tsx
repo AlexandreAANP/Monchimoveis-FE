@@ -3,6 +3,7 @@
 import IntroContainer from "../components/introContainer/Container";
 import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
 import MoveisPersonalizadosContainer from "../components/moveisPersonalizados/Container";
+import Contact from "../components/contact/ContactContainer";
 import ProjectsContainer, { categoryProps } from "../components/projects/projectsContainer";
 import content from "../content";
 // import fs from 'fs';
@@ -78,16 +79,14 @@ export default function Home() {
       items={data.services.items}
       isMobile={isMobile}
     />
+      
 
     <ProjectsContainer
       categories={categories(data.projects)}
 
     />
     
-    <div className='bg-gray-200 w-full h-96 flex items-center justify-center'>
-        <h1>Contacte-nos</h1>
-        <br></br>
-    </div>
+    <Contact title={data.contact.title} text={data.contact.text} address={data.contact.address} phone={data.contact.phone} email={data.contact.email}/>
 
    </>
   );
