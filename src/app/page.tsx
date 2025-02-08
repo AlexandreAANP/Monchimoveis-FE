@@ -83,7 +83,11 @@ export default function Home() {
       categories={categories(data.projects)}
 
     />
-      
+    
+    <div className='bg-gray-200 w-full h-96 flex items-center justify-center'>
+        <h1>Contacte-nos</h1>
+        <br></br>
+    </div>
 
    </>
   );

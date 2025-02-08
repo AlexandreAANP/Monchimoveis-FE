@@ -68,6 +68,9 @@ projects:
           url: "#"
         - title: "Cómoda"
           image: "projects_cama3.jpg"
+        - title: "Cama de Casal2"
+          image: "projects_cama.jpg"
+          url: "#"
     - name: "Mesas"
       items:
         - title: "Mesa"

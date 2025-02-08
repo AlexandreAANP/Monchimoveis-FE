@@ -66,4 +66,47 @@
     font-weight: 400;
     color: #333;
 }
+
+.h4Mobile{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #333;
+    display: none;
+}
+
+.overlay {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 12px;
+    }
+    .portofolioItem {
+        max-width: 150px;
+    }
+
+    .h4 {
+        font-size: 15px;
+    }
+    .h4Mobile{
+        display: block;
+    }
+
+    .image {
+        max-width: 150px;
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .divItems {
+        justify-content: center;
+    }
+    
+}
  

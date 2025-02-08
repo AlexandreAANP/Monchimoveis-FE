@@ -3,7 +3,7 @@ import styles from './projects.module.css';
 import ProjectButton from './Button';
 import PortofolioItem from './PortofolioItem';
 import { PortofolioItemProps } from './PortofolioItem';
-
+import Masonry from "react-masonry-css";
 import { motion, AnimatePresence } from "framer-motion";
 
 
@@ -41,30 +41,31 @@ export default function ProjectsContainer({categories}: {categories:categoryProp
 
     ));
 
-    console.log(Items.flat().sort(() => Math.random() - 0.5));
-    var items = Items.flat();
-    items.sort(() => Math.random() - 0.5);
+    const filteredItems = Items.flat().filter((item) => item.props.category === active || active === "ALL");
+
     return (
         <div id="projects" className={styles.projects}>
 
             <div className='flex flex-col items-center '>
                 <div className='max-w-[1170px]'>
                     <div className='flex flex-col items-center' style={{marginBottom: "70px"}}>
-                        <h2 className={styles.h2}>Projects</h2>
+                        <h2 className={styles.h2}>Projetos</h2>
                         <hr className={styles.hr}></hr>
                     </div>
-                    <div className='flex flex-row items-center justify-center gap-5'>
+                    <div className='flex flex-row flex-wrap items-center justify-center gap-5'>
                         {buttons}
                     </div>
 
-                    <div className="flex flex-wrap items-center justify-center gap-5">
-                        {items}
+
+                    <div className={`flex flex-wrap items-left justify-between gap-5 ${styles.divItems}`} style={{marginTop: "70px"}}>   
+                    
+                    {filteredItems}
+
+
                     </div>
+
                 </div>
-                <div className='bg-gray-200 w-full h-96 flex items-center justify-center'>
-                    <h1>Teste</h1>
-                    <br></br>
-                </div>
+               
             </div>
         </div>
     )
