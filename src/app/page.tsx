@@ -3,6 +3,7 @@
 import IntroContainer from "../components/introContainer/Container";
 import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
 import MoveisPersonalizadosContainer from "../components/moveisPersonalizados/Container";
+import Contact from "../components/contact/ContactContainer";
 import content from "../content";
 // import fs from 'fs';
 import yaml from 'js-yaml';
@@ -65,6 +66,7 @@ export default function Home() {
       isMobile={isMobile}
     />
       
+    <Contact/>
 
    </>
   );
