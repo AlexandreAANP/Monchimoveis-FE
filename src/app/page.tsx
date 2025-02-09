@@ -5,6 +5,7 @@ import OurHistoryContainer from "../components/ourHistory/ourHistoryContainer";
 import MoveisPersonalizadosContainer from "../components/moveisPersonalizados/Container";
 import Contact from "../components/contact/ContactContainer";
 import ProjectsContainer, { categoryProps } from "../components/projects/projectsContainer";
+import Footer from "../components/footer/FooterContainer";
 import content from "../content";
 // import fs from 'fs';
 import yaml from 'js-yaml';
@@ -88,6 +89,8 @@ export default function Home() {
     
     <Contact title={data.contact.title} text={data.contact.text} address={data.contact.address} phone={data.contact.phone} email={data.contact.email}/>
 
+
+    <Footer facebookUrl={data.footer.facebookUrl} instagramUrl={data.footer.instagramUrl}/>
    </>
   );
 }
