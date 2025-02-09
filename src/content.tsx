@@ -97,6 +97,10 @@ contact:
   address: "CARREIRINHA DAS MOÇAS CX-POSTAL 510X, 8550-427 Monchique"
   phone: "+351 910 679 001"
   email: "josegilvarela@hotmail.com"
+
+footer:
+  facebookUrl: "https://www.facebook.com/profile.php?id=61551917374580&locale=pt_PT"
+  instagramUrl: "https://www.instagram.com/josegilvarela/"
   `;
 
 }

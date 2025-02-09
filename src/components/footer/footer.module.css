@@ -1,0 +1,40 @@
+.footer {
+    background-color: #333;
+    padding: 50px 0 20px 0;
+}
+
+.socialMedia {
+    margin-bottom: 50px;
+}
+
+.footer li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footerIcon {
+    font-size: 38px;
+    padding: 4px;
+    color: #a7c44c;
+    transition: all 0.3s;
+}
+
+.footerIcon:hover {
+    color: #eee;
+}
+
+.footer a {
+    color: white;
+    cursor: pointer;
+}
+
+.footer p {
+    font-size: 15px;
+    margin: 0 0 10px;
+    color: #777;
+    text-align: center;
+}
+
+.footer b {
+    color: #777;
+}
